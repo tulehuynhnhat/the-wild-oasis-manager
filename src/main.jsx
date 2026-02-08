@@ -9,5 +9,5 @@ createRoot(document.getElementById('root')).render(
     <ErrorBoundary FallbackComponent={ErrorFallback} onReset={() => window.location.replace('/')}>
       <App />
     </ErrorBoundary>
-  </StrictMode>
+  </StrictMode>,
 );
