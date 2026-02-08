@@ -21,6 +21,7 @@ const StyledSalesChart = styled(DashboardBox)`
   & .recharts-cartesian-grid-vertical line {
     stroke: var(--color-grey-300);
   }
+  overflow-x: auto;
 `;
 
 function SalesChart({ bookings, numDays }) {

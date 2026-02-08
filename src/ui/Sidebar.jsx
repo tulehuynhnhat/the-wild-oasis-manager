@@ -12,14 +12,20 @@ const StyledSidebar = styled.aside`
   display: flex;
   flex-direction: column;
   gap: 3.2rem;
+  overflow: hidden;
+
+  min-width: 26rem;
+  transform: ${(props) => (!props.$isOpen ? 'translateX(-100%)' : 'translateX(0)')};
+  transition: transform 0.4s;
+  z-index: 1;
 `;
 
-function Sidebar() {
+function Sidebar({ isOpen }) {
   return (
-    <StyledSidebar>
+    <StyledSidebar $isOpen={isOpen}>
       <Logo />
       <MainNav />
-      {/* <Uploader /> */}
+      <Uploader />
     </StyledSidebar>
   );
 }

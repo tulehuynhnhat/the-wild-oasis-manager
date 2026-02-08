@@ -15,7 +15,7 @@ const StyledToggle = styled.button`
   border: none;
   padding: 0.4rem;
   border-radius: var(--border-radius-sm);
-  transform: translateX(0.8rem);
+  transform: translateX(-10rem);
   transition: all 0.2s;
 
   &:hover {
@@ -113,7 +113,7 @@ function List({ id, children }) {
     <StyledList position={position} ref={ref}>
       {children}
     </StyledList>,
-    document.body
+    document.body,
   );
 }
 

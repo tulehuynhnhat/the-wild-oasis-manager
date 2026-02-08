@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const StyledFormRow = styled.div`
   display: grid;
   align-items: center;
-  grid-template-columns: 24rem 1fr 1.2fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 2.4rem;
 
   padding: 1.2rem 0;
@@ -25,10 +25,17 @@ const StyledFormRow = styled.div`
     justify-content: flex-end;
     gap: 1.2rem;
   }
+
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1rem;
+  }
 `;
 
 const Label = styled.label`
   font-weight: 500;
+  min-width: 50px;
 `;
 
 const Error = styled.span`

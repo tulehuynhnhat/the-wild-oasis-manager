@@ -1,13 +1,23 @@
 import { createContext, useContext } from 'react';
 import styled from 'styled-components';
 
+const TableWrapper = styled.div`
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+
+  /* Optional: nicer scrollbar behavior */
+  scrollbar-width: thin;
+`;
+
 const StyledTable = styled.div`
   border: 1px solid var(--color-grey-200);
 
   font-size: 1.4rem;
   background-color: var(--color-grey-0);
   border-radius: 7px;
-  overflow: hidden;
+  /* overflow: hidden; */
+  min-width: fit-content;
 `;
 
 const CommonRow = styled.div`
@@ -27,13 +37,25 @@ const StyledHeader = styled(CommonRow)`
   letter-spacing: 0.4px;
   font-weight: 600;
   color: var(--color-grey-600);
+  & > :not(img):not(svg) {
+    min-width: 100px;
+  }
 `;
 
 const StyledRow = styled(CommonRow)`
   padding: 1.2rem 2.4rem;
+  text-align: left;
 
   &:not(:last-child) {
     border-bottom: 1px solid var(--color-grey-100);
+  }
+
+  & > :not(img):not(svg) {
+    min-width: 100px;
+  }
+
+  & > img:not(svg) {
+    min-width: 100px;
   }
 `;
 
@@ -65,7 +87,9 @@ const TableContext = createContext();
 function Table({ columns, children }) {
   return (
     <TableContext.Provider value={{ columns }}>
-      <StyledTable role="table">{children}</StyledTable>
+      <TableWrapper>
+        <StyledTable role="table">{children}</StyledTable>
+      </TableWrapper>
     </TableContext.Provider>
   );
 }
