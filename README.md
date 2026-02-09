@@ -76,7 +76,7 @@ Internal hotel management application with a dashboard for managing bookings, gu
   - Maximum nights per booking
   - Maximum guests per booking
 
-### User interface
+### User interface & Experience
 
 - Dark mode support
-- Mobile-optimized for quick review and essential actions on phones
+- Mobile-optimized UI for quick review and essential actions
