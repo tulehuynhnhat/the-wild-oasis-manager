@@ -1,6 +1,6 @@
 # The Wild Oasis Manager
 
-Internal hotel management application with a dashboard for managing bookings, guests, cabins and viewing statistics.
+An internal hotel management application with a dashboard for managing bookings, guests, cabins and viewing statistics.
 
 ## Features
 
