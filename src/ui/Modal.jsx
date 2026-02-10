@@ -14,6 +14,10 @@ const StyledModal = styled.div`
   box-shadow: var(--shadow-lg);
   padding: 3.2rem 4rem;
   transition: all 0.5s;
+
+  @media (max-width: 640px) {
+    padding: 2rem 2rem;
+  }
 `;
 
 const Overlay = styled.div`
@@ -84,7 +88,7 @@ function Window({ children, name }) {
         <div>{cloneElement(children, { onCloseModal: handleClose })}</div>
       </StyledModal>
     </Overlay>,
-    document.body
+    document.body,
   );
 }
 

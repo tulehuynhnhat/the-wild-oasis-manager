@@ -30,6 +30,7 @@ const Header = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 0.8rem;
 
   svg {
     height: 3.2rem;
@@ -49,6 +50,25 @@ const Header = styled.header`
     font-size: 2rem;
     margin-left: 4px;
   }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+
+    svg {
+      height: 2.4rem;
+      width: 2.4rem;
+    }
+
+    & div:first-child {
+      font-size: 1.5rem;
+    }
+
+    & span {
+      font-size: 1.7rem;
+    }
+  }
 `;
 
 const Section = styled.section`
@@ -65,6 +85,12 @@ const Guest = styled.div`
   & p:first-of-type {
     font-weight: 500;
     color: var(--color-grey-700);
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 0rem;
+    font-size: 1.2rem;
   }
 `;
 
@@ -90,6 +116,16 @@ const Price = styled.div`
     height: 2.4rem;
     width: 2.4rem;
     color: currentColor !important;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 0rem;
+    font-size: 1.2rem;
+
+    & p:last-child {
+      font-size: 1.2rem;
+    }
   }
 `;
 

@@ -19,7 +19,7 @@ const Row = styled.div.attrs((props) => ({
       gap: 1.6rem;
     `}
     
- @media (max-width: 640px) {
+ @media (max-width: 1024px) {
     flex-direction: column;
   }
 `;

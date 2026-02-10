@@ -19,7 +19,12 @@ const Form = styled.form.attrs((props) => ({ type: props.type || 'regular' }))`
   ${(props) =>
     props.type === 'modal' &&
     css`
-      width: 80rem;
+      max-width: 80rem;
+      width: 100%;
+
+      @media (max-width: 640px) {
+        max-width: auto;
+      }
     `}
     
   overflow: hidden;
